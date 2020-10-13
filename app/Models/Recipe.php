@@ -18,4 +18,9 @@ class Recipe extends Model
         'ingredients',
         'steps'
     ];
+
+    public function user()
+    {
+      return $this->belongsTo(User::class);
+    }
 }
