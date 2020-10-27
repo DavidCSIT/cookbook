@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
 <h1>All the Recipes</h1>
 
 <!-- will be used to show any messages -->
@@ -15,6 +15,7 @@
         <tr>
             <td>ID</td>
             <td>Name</td>
+            <td>Picture</td>
             <td>Serves</td>
             <td>Rating</td>
             <td>PrepTime</td>
@@ -29,6 +30,7 @@
         <tr>
             <td>{{ $recipe->id }}</td>
             <td>{{ $recipe->name }}</td>
+            <td> <img src="{{ $recipe->image }}" alt=""> </td>
             <td>{{ $recipe->serves }}</td>
             <td>{{ $recipe->rating }}</td>
             <td>{{ $recipe->prepTime }}</td>
