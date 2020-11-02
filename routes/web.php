@@ -12,4 +12,4 @@ Route::middleware(['auth:sanctum', 'verified']) ->get('/dashboard', function () 
 
 Route::resource('recipes', RecipeController::class)->only(['index','show']);
 
-Route::resource('recipes', RecipeController::class)->only(['create','store','edit','store','update','destroy']) ->middleware('auth');
+Route::resource('recipes', RecipeController::class)->only(['create','store','edit','store','update','destroy'])->middleware('auth');
